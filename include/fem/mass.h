@@ -17,5 +17,8 @@
  */
 void inline mass(const Vec3d &AB, const Vec3d &AC, double *__restrict M)
 {
-	/* Your implementation goes here ! */
+	double c = norm(cross(AB, AC)) / 24;
+	double d = 2.0 * c;
+
+	M[0] = d; M[1] = c; 
 }

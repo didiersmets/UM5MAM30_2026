@@ -13,9 +13,12 @@
  * Idea behind computation :
  * -------------------------
  *
- * Hiden for now.
+ * Hiden for now. 
  */
 void inline mass(const Vec3d &AB, const Vec3d &AC, double *__restrict M)
 {
-	/* Your implementation goes here ! */
+	double areaABC = 1/2 * norm(cross(AB, AC));
+	M[0] = areaABC * 1/6;
+	M[1] = areaABC * 1/12;
 }
+

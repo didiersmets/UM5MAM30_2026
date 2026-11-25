@@ -18,4 +18,12 @@
 void inline mass(const Vec3d &AB, const Vec3d &AC, double *__restrict M)
 {
 	/* Your implementation goes here ! */
+	double area = 0.5 * norm(cross(AB, AC)); // Evaluation of the area of the triangle ABC
+
+	double coeff = area / 12.0; // Reference coefficient
+
+	M[0] = coeff * 2.0; // Diagonal term
+	M[1] = coeff * 1.0; // Extra-diagonal term
+
+	return;
 }

@@ -13,9 +13,10 @@
  * Idea behind computation :
  * -------------------------
  *
- * Hiden for now.
+ * Le coefficient diagonal est contenu dans M[0], le coefficient hors diagonale est contenu dans M[1].
  */
 void inline mass(const Vec3d &AB, const Vec3d &AC, double *__restrict M)
 {
-	/* Your implementation goes here ! */
+	M[0]=norm(cross(AB,AC))/12;
+	M[1]=M[0]/2;
 }

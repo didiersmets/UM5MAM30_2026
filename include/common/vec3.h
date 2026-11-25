@@ -229,3 +229,8 @@ TVec3<T> abs(const TVec3<T> &a)
 	return {a.x < 0 ? -a.x : a.x, a.y < 0 ? -a.y : a.y,
 		a.z < 0 ? -a.z : a.z};
 }
+
+float inline aire(const Vec3d &AB, const Vec3d &AC)
+{
+	return norm(cross(AB, AC))/2.
+}

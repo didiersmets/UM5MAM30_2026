@@ -23,5 +23,12 @@
  */
 void inline stiffness(const Vec3d &AB, const Vec3d &AC, double *__restrict S)
 {
-	/* Your implementation goes here */
+	double AIRE = aire(AB, AC);
+	Vec3d BC = AC - AB;
+	S[0] = norm2(BC) / AIRE ;
+	S[1] = norm2(AC) / AIRE ;
+	S[2] = norm2(AB) / AIRE ;
+	S[3] = dot(AC, BC)/ AIRE;
+	S[4] = dot(AB, AC)/ AIRE;
+	S[5] = - dot(AB, BC)/ AIRE;
 }

@@ -15,7 +15,21 @@
  *
  * Hiden for now.
  */
+
 void inline mass(const Vec3d &AB, const Vec3d &AC, double *__restrict M)
 {
-	/* Your implementation goes here ! */
+	double AIRE = aire(AB, AC);
+	M[0] = AIRE/12.;
+	M[1] = AIRE/24.;
+
 }
+
+/*
+
+AIRE = (AB ^ AC)/2
+M_ii = AIRE/12
+M_ij = AIRE/24
+
+
+
+*/
